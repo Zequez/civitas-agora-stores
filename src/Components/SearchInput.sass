@@ -1,0 +1,31 @@
+$height: $lh + $p * 2
+
+.search-input
+  position: relative
+  height: $height
+
+  &-search, &-erase
+    +flex-center
+    width: $height
+    height: 100%
+    position: absolute
+    top: 0
+    color: $color-text-grey
+    font-size: 1.5rem
+  &-search
+    left: 0
+  &-erase
+    right: 0
+    cursor: pointer
+    &-hidden
+      display: none
+
+  input
+    +paper
+    display: block
+    width: 100%
+    padding: $p $height
+    color: $color-text-dark
+    box-sizing: border-box
+    &:focus
+      box-shadow: $card-shadow-1, $outline-shadow

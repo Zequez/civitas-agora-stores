@@ -1,0 +1,67 @@
+[
+  {
+    "id": "comida",
+    "name": "Comida"
+    , "subcat":
+      [ { "id": "pizza", "name": "Pizzas"}
+      , { "id": "hamburguesa", "name": "Hamburguesas" }
+      , { "id": "pasta", "name": "Pastas" }
+      , { "id": "empanada", "name": "Empanadas" }
+      , { "id": "sanguche", "name": "Sánguches" }
+      , { "id": "miga", "name": "Sanguchitos de miga"}
+      ]
+  }
+  , {
+    "id": "dulce",
+    "name": "Dulces"
+    , "subcat":
+      [ { "id": "reposteria", "name": "Repostería"}
+      , { "id": "facturas", "name": "Facturas" }
+      , { "id": "galles", "name": "Galletitas" }
+      , { "id": "helado", "name": "Helado" }
+      ]
+  }
+  , {
+    "id": "cosmetica",
+    "name": "Cosmética"
+  }
+  , {
+    "id": "viandas",
+    "name": "Viandas"
+  }
+  , {
+    "id": "catering",
+    "name": "Cátering"
+  }
+  , {
+    "id": "frutihorticola",
+    "name": "Frutas y verduras"
+    , "subcat":
+      [ { "id": "bolsones", "name": "Bolsones" }
+      , { "id": "verduleria", "name": "A pedido" }
+      ]
+  }
+  , {
+    "id": "despensa",
+    "name": "Despensa"
+    , "subcat":
+      [ { "id": "granel", "name": "Granel" }
+      , { "id": "medallones", "name": "Medallones" }
+      , { "id": "embutidos", "name": "Embutidos" }
+      , { "id": "tofu", "name": "Tofu"}
+      , { "id": "seitan", "name": "Seitán" }
+      , { "id": "yogurt", "name": "Yogurt" }
+      , { "id": "leches", "name": "Leches" }
+      , { "id": "quesos", "name": "Quesos" }
+      , { "id": "mayonesas", "name": "Mayonesas" }
+      ]
+  }
+  , {
+    "id": "restaurantes",
+    "name": "Restaurantes"
+  }
+  , {
+    "id": "otros",
+    "name": "Otros"
+  }
+]

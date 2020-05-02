@@ -1,0 +1,15 @@
+{
+  "short_name": "Mercado.Mardel.org",
+  "name": "Mercado.Mardel.org",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#81b742",
+  "background_color": "#ffffff"
+}

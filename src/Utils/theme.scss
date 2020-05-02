@@ -1,0 +1,59 @@
+$lh: 24px;
+$p: 16px;
+$font-size: 16px;
+
+$radius: 4px;
+$radius-large: 32px;
+
+$color-s-regular: #1e88e5;
+$color-s-light: #6ab7ff;
+$color-s-dark: #005cb2;
+$color-p-regular: #81b742;
+$color-p-light: lighten($color-p-regular, 10%);
+$color-p-dark: darken($color-p-regular, 10%);
+
+$color-white: #ffffff;
+$color-light: #fafafa;
+$color-dark: #111;
+$color-black: #000000;
+
+$color-text-disabled: rgba(#000, 0.25);
+$color-text-grey: rgba(#000, 0.5);
+$color-text-dark: rgba(#000, 0.86);
+$color-text-light: rgba(#fff, 1);
+
+$card-shadow-1: 0 1px 1px rgba(#000, 0.3);
+$card-shadow-2: 0px 2px 1px -1px rgba(#000,0.2), 0px 1px 1px 0px rgba(#000,0.14), 0px 1px 3px 0px rgba(#000,0.12);
+$outline-shadow: inset 0 0 0 3px $color-s-regular;
+
+$i-size-5: 32px;
+$i-size-4: 24px;
+$i-size-3: 20px;
+$i-size-2: 16px;
+$i-size-1: 12px;
+
+@mixin font-h3 { font-size: 48px; letter-spacing: 0px; }
+@mixin font-h4 { font-size: 34px; letter-spacing: 0.25px; }
+@mixin font-h5 { font-size: 24px; letter-spacing: 0px; }
+@mixin font-h6 { font-size: 20px; font-weight: 500; letter-spacing: 0.15px; }
+@mixin font-body1 { font-size: 16px; letter-spacing: 0.5px; }
+@mixin font-body2 { font-size: 14px; letter-spacing: 0.25px; }
+@mixin font-subtitle1 { font-size: 16px; letter-spacing: 0.15px; }
+@mixin font-subtitle2 { font-size: 14px; font-weight: 500; letter-spacing: 0.1px; }
+@mixin flex-center { display: flex; justify-content: center; align-items: center; }
+
+@mixin fontello {
+  font-family: 'Fontello';
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin paper {
+  box-shadow: $card-shadow-1;
+  border-radius: $radius;
+  background-color: $color-white;
+}
+
+
+@import "media-mixins.sass"

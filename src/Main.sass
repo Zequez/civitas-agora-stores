@@ -1,0 +1,124 @@
+@charset "utf-8"
+
+// elm-hot creates an additional div wrapper around the app to make HMR possible.
+// This could break styling in development mode if you are using Elm UI.
+[data-elm-hot="true"]
+  height: inherit
+
+// Little hack so the Elm debugger icon doesn't cover the floating action button
+body > div:last-child
+  bottom: 100px!important
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300400500&display=swap')
+
+@import "Utils/reset.sass"
+@import "Utils/theme.scss"
+
+html, body
+  height: 100%
+
+body
+  background: $color-light
+  font-family: 'Roboto', sans-serif
+  line-height: $lh
+
+a
+  color: $color-s-regular
+  &:focus
+    outline-color: $color-s-regular
+
+main
+  display: flex
+  flex-direction: column
+  height: 100%
+
+input
+  +font-h6
+  border: none
+  background: $color-white
+  color: $color-text-dark
+  transition: box-shadow 0.3s
+  &::placeholder
+    color: $color-text-disabled
+
+  &:focus
+    outline: none
+
+.input
+  height: $lh + $p*2
+  padding: 0 $p
+  border-radius: $radius
+  // border: solid 1px $color-text-disabled
+  box-shadow: 0 0 0 1px $color-text-disabled
+  font-weight: normal
+  &:focus
+    outline: none
+    box-shadow: $card-shadow-1, $outline-shadow
+  // box-shadow: inset rgba($color-t)
+
+
+select
+  height: $lh
+  line-height: $lh
+  padding: 0 $p
+  -webkit-appearance: none
+  -moz-appearance: none
+  border: none
+  background-image: url("data:image/svg+xmlutf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='40' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+  background-repeat: no-repeat
+  background-position-x: 100%
+  background-position-y: 0
+  transition: box-shadow 0.3s
+  &:focus
+    outline: none
+    box-shadow: $card-shadow-1, $outline-shadow
+
+
+.i
+  line-height: $lh
+
+
+.container
+  padding: $p
+  margin: 0 auto
+  width: 100%
+  max-width: $tablet
+  flex-grow: 1
+
+.paper
+  +paper
+
+
+.card
+  box-shadow: $card-shadow-2
+  border-radius: $radius
+  background-color: $color-white
+  .card-block
+    padding: $p
+
+  .card-actions
+    padding: $p/2
+
+  .card-links
+    display: flex
+    border-top: solid 1px rgba(#000, 0.1)
+    a
+      +flex-center
+      border-right: solid 1px rgba(#000, 0.1)
+      flex: 1 1 0px
+      height: $lh*2
+      text-decoration: none
+      .i
+        margin-right: $p/4
+
+      &:last-child
+        border-right: 0
+
+@import "Components/Nav.sass"
+@import "Components/SearchInput.sass"
+@import "Components/Switch.sass"
+@import "Utils/Btn.sass"
+
+@import "Page/Stores.sass"
+@import "Page/Admin.sass"
+@import "Page/Identify.sass"

@@ -1,0 +1,57 @@
+$width: 36px
+$height: 14px
+$extraBall: 3px
+$ballSize: $height + $extraBall * 2
+$ballStick: 14px
+$ballSideExtra: $ballSize / 2 - $ballStick / 2
+.switch
+  position: relative
+  display: inline-block
+  width: $width
+  height: $lh
+
+.switch input
+  opacity: 0
+  width: 0
+  height: 0
+
+/* Track */
+.slider
+  position: absolute
+  cursor: pointer
+  top: ($lh - $height) / 2
+  left: 0
+  right: 0
+  height: $height
+  background-color: #ccc
+  -webkit-transition: 0.4s
+  transition: 0.4s
+  border-radius: $height / 2
+  // box-shadow: inset 0 0 0 1px rgba(#000, .1)
+
+/* Ball */
+.slider:before
+  position: absolute
+  content: ""
+  height: $ballSize
+  width: $ballSize
+  left: -$ballSideExtra
+  top: -$extraBall
+  background-color: white
+  transition: transform 0.3s, box-shadow 0.3s
+  border-radius: 50%
+  box-shadow: $card-shadow-1
+
+input:focus + .slider:before
+  box-shadow: $card-shadow-1, $outline-shadow
+
+input:checked + .slider
+  background-color: mix($color-s-regular, #ccc, 50%)
+  // box-shadow: inset 0 0 3px 0 rgba(#000, .5), inset 0 0 0 1px rgba(#000, .2)
+
+input:checked + .slider:before
+  background-color: $color-s-regular
+
+$translate: $ballSideExtra * 2 + $width - $ballSize
+input:checked + .slider:before
+  transform: translateX($translate)
